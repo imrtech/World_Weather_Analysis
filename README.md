@@ -265,7 +265,7 @@ preferred_cities_df.head(10)
 
 ![This is an image](/Vacation_Search/Temp_criteria.png)
 
-We cleaned some of the data by runnin the `dropna() function to remove any empty rows.
+We cleaned some of the data by runnin the `dropna()` function to remove any empty rows.
 
 ```
 # Drop any empty rows in the preferred_cities_df DataFrame and create a new DataFrame.
@@ -417,7 +417,7 @@ fig.add_layer(marker_layer)
 # Display the figure containing the map
 fig
 ```
-![This is an image](/Vacation_Search/WeatherPy_vacation_map.png)
+![This is an image](/Vacation_Search/WeatherPY_vacation_map.png)
 
 
 ### Deliverable 3: 
@@ -452,7 +452,7 @@ vacation_df = pd.read_csv("../Vacation_Search/WeatherPy_vacation.csv")
 vacation_df.head()
 ```
 
-![This is an image](/Vacation_Intinerary/vacation_df.png)
+![This is an image](/Vacation_Search/vacation_df.png)
 
 We set up the pop-up markers and created a marker layer map on the vacation search results. This used the same code as Deliverable 2.
 
