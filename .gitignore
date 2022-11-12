@@ -4,6 +4,11 @@ config.py
 # Adding additional files.
 API_practice.ipynb
 random_numbers.ipynb
+WeatherPy.ipynb
+Google_Nearby_Search.ipynb
+VacationPy.ipynb
+WeatherPy_vacation-backup.csv
+
 #test
 
 # Byte-compiled / optimized / DLL files
