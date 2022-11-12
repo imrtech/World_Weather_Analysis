@@ -41,13 +41,13 @@ We added the results to a list.
 coordinates = list(lat_lngs)
 ```
 
-We used a for loop to identify the nearest city to the current coordinates. The result was 790.
+We used a `for` loop to identify the nearest city to the current coordinates. The result was 790.
 
 ```
 # Create an empty list for holding the cities
 cities = []
 
-# Use a for loop to identify nearest city for each latitude and longitude combination using the citipy module
+# Use a `for` loop to identify nearest city for each latitude and longitude combination using the citipy module
 for coordinate in coordinates:
     # Use the citipy module to identify the nearest city to the current coordinate
     city = citipy.nearest_city(coordinate[0], coordinate[1]).city_name
@@ -299,7 +299,7 @@ hotel_df["Hotel Name"] = ""
 hotel_df.head(10)
 ```
 
-To populate the hotel column we used parameters to search for a hotel and ran a for loop to retrieve the latitude and longitude of each city to find the nearest hotel based on the search parameters. If a hotel was not found, we would skip to the next city.
+To populate the hotel column we used parameters to search for a hotel and ran a `for` loop to retrieve the latitude and longitude of each city to find the nearest hotel based on the search parameters. If a hotel was not found, we would skip to the next city.
 
 ```
 # Review the parameters to search for a hotel
@@ -452,7 +452,7 @@ vacation_df = pd.read_csv("../Vacation_Search/WeatherPy_vacation.csv")
 vacation_df.head()
 ```
 
-![This is an image](/Vacation_Search/vacation_df.png)
+![This is an image](/Vacation_Itinerary/vacation_df.png)
 
 We set up the pop-up markers and created a marker layer map on the vacation search results. This used the same code as Deliverable 2.
 
