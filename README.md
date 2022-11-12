@@ -5,7 +5,7 @@
 In this project we are testing new capabilitiles for the PlanMyTrip app. This information will be used to identify potential travel destinations and nearby hotels.
 
 We will perform the following:
- - Add the weather description to the weather data and use OpenWeatherMap's API to retreive the latitude and longtitude, temperatures, and other weather conditions such as humidity, cloudiness, and windspeed.
+ - Add the weather description to the weather data and use OpenWeatherMap's API to retrieve the latitude and longtitude, temperatures, and other weather conditions such as humidity, cloudiness, and windspeed.
  - Filter data by creating user inputs for weather preferences. 
  - Create a travel itinerary
  - We will use Google Maps Directions API to create a travel route between the four cities and a marker layer map.
@@ -13,9 +13,7 @@ We will perform the following:
 
 ## Results
 
-## Exploratory Analysis
-
-###Deliverable 1: 
+### Deliverable 1: 
 
 We performed analysis on weather data. We created a python file and imported these libraries:
 
@@ -267,7 +265,7 @@ preferred_cities_df.head(10)
 
 ![This is an image](/Vacation_Search/Temp_criteria.png)
 
-We cleaned some of the data by runnin the dropna() function to remove any empty rows.
+We cleaned some of the data by runnin the `dropna() function to remove any empty rows.
 
 ```
 # Drop any empty rows in the preferred_cities_df DataFrame and create a new DataFrame.
@@ -301,7 +299,7 @@ hotel_df["Hotel Name"] = ""
 hotel_df.head(10)
 ```
 
-To populate the hotel column we used parameters to search for a hotel and ran a for loop to retreive the latitude and longitude of each city to find the nearest hotel based on the search parameters. If a hotel was not found, we would skip to the next city.
+To populate the hotel column we used parameters to search for a hotel and ran a for loop to retrieve the latitude and longitude of each city to find the nearest hotel based on the search parameters. If a hotel was not found, we would skip to the next city.
 
 ```
 # Review the parameters to search for a hotel
@@ -383,7 +381,7 @@ hotel_info = [info_box_template.format(**row) for index, row in clean_hotel_df.i
 hotel_info[:10]
 ```
 
-We then retreived the city data from each row and added it to the exiting hotel_info list.
+We then retrieved the city data from each row and added it to the exiting hotel_info list.
 
 ```
 # Get the data from each row in the clean_hotel_df DataFrame, add it to the formatting template, and store the data in a list.
@@ -393,7 +391,7 @@ hotel_info = [info_box_template.format(**row) for index, row in clean_hotel_df.i
 hotel_info[:10]
 ```
 
-We retreived the latitude and longitude from each row and created a the locations DataFrame.
+We retrieved the latitude and longitude from each row and created a the locations DataFrame.
 
 ```
 # Get the latitude and longitude from each row and store in a new DataFrame.
@@ -526,7 +524,7 @@ fig.add_layer(vacation_itinerary)
 fig
 ```
 
-![This is an image](/Vacation_Intinerary/WeatherPy_travel_map.png)
+![This is an image](/Vacation_Itinerary/WeatherPy_travel_map.png)
 
 To create an itinerary, we used the concat() function code snippet to combine the four cities in one DataFrame.
 
@@ -546,18 +544,12 @@ itinerary_df = pd.concat(
 itinerary_df
 ```
 
-
 We refactored the code to create a new marker layer map of the cities on the travel route.
+
 ![This is an image](/Vacation_Itinerary/WeatherPy_travel_map_markers.png)
 
+### The Code Files:
 
-
-## Summary
-
-From what we have gathered, we can see that in rural areas, ride-sharing was low and only made up $4,327.93 in total fares. This could be attributed to the low number of drivers available or the high fares. We would need to analyze this further to see if there are any correlations and look at other factors that may contribute to low ridership, such as trip distance or other commutting options. 
-
-Total fares amoung the three city types was $63,538.64. With urban areas generating the highest total fares at $39,854.38. An interesting discovery is that suburban drivers accounted for roughly 30% of the total fares, even though they only made up about 12.5% of all drivers. Additional analysis would be required to understand why this is the case. 
-
-In general we see that that ridership is high in urban areas, where there are more drivers, and the fares are low. Analyzing distances traveled and the presence of other commutting options or lack thereof in those areas would be an interesting approach. 
-
-- The code file can be found here:  [filename](/PyBer_Challenge.ipynb)
+- The code files can be found here:  [filename](/Weather_Database/Weather_Database.ipynb)
+- The code files can be found here:  [filename](/Vacation_Search/Vacation_Search.ipynb)
+- The code files can be found here:  [filename](/Vacation_Itinerary/Vacation_Itinerary.ipynb)
